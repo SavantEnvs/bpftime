@@ -1,0 +1,10 @@
+project: savantenvs/bpftime
+target: bpftime-object-open-fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/bpftime-object-open-fuzzer/testsuite
+
+cmds:
+  - cmd: /mayhem/bpftime_object_open_fuzzer
+    libfuzzer: true
+    timeout: 5

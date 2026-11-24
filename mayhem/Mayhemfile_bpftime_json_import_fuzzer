@@ -1,0 +1,10 @@
+project: savantenvs/bpftime
+target: bpftime-json-import-fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/bpftime-json-import-fuzzer/testsuite
+
+cmds:
+  - cmd: /mayhem/bpftime_json_import_fuzzer
+    libfuzzer: true
+    timeout: 5

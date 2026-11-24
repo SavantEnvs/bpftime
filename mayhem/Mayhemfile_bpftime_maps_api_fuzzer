@@ -1,0 +1,10 @@
+project: savantenvs/bpftime
+target: bpftime-maps-api-fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/bpftime-maps-api-fuzzer/testsuite
+
+cmds:
+  - cmd: /mayhem/bpftime_maps_api_fuzzer
+    libfuzzer: true
+    timeout: 5
